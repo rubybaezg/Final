@@ -35,7 +35,7 @@ app.post("/comentario", (req, res) => {
     }
 })
 
-var puerto = 3000;
+var puerto = process.env.PORT || 3000;
 app.listen(puerto, () => {
     console.log( "Escuchando en el puerto " + puerto );
     console.log(comentarios);
